@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patients>
+    <patient id="1" surname="Рябина" firstname="Диана" lastname="Игоревна" dateOfBirth="2004-11-11" address="ул. Чечерская" phone="+375 29 1234567" diseases="Здорова"/>
+</patients>

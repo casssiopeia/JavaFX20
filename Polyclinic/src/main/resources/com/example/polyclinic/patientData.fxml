@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="702.0" prefWidth="938.0" style="-fx-background-color: #CEF6F5; -fx-border-color: #0080FF; -fx-border-width: 4px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.polyclinic.PatientDataController">
+   <children>
+      <TableView fx:id="dataTable" layoutX="14.0" layoutY="14.0" prefHeight="518.0" prefWidth="910.0" style="-fx-background-color: #EFFBFB; -fx-border-width: 3px; -fx-border-color: #A9E2F3;">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="32.79995822906494" style="-fx-background-color: #A9E2F3; -fx-border-width: 1px; -fx-border-color: black;" text="№" />
+          <TableColumn fx:id="surnameColumn" prefWidth="111.19997787475586" style="-fx-background-color: #A9E2F3; -fx-border-width: 1px; -fx-border-color: black;" text="Фамилия" />
+            <TableColumn fx:id="firstnameColumn" prefWidth="121.59996032714844" style="-fx-background-color: #A9E2F3; -fx-border-width: 1px; -fx-border-color: black;" text="Имя" />
+            <TableColumn fx:id="lastnameColumn" prefWidth="128.79998779296875" style="-fx-border-width: 1px; -fx-border-color: black; -fx-background-color: #A9E2F3;" text="Отчество" />
+            <TableColumn fx:id="dateOfBirthColumn" prefWidth="115.199951171875" style="-fx-border-width: 1px; -fx-border-color: black; -fx-background-color: #A9E2F3;" text="Дата рождения" />
+            <TableColumn fx:id="addressColumn" prefWidth="172.79998779296875" style="-fx-border-width: 1px; -fx-border-color: black; -fx-background-color: #A9E2F3;" text="Адрес" />
+            <TableColumn fx:id="phoneColumn" prefWidth="110.4000244140625" style="-fx-border-width: 1px; -fx-border-color: black; -fx-background-color: #A9E2F3;" text="Номер телефона" />
+            <TableColumn fx:id="diseasesColumn" prefWidth="108.7999267578125" style="-fx-border-width: 1px; -fx-border-color: black; -fx-background-color: #A9E2F3;" text="Заболевания" />
+        </columns>
+      </TableView>
+      <Button fx:id="sortFromFirstButton" layoutX="14.0" layoutY="592.0" mnemonicParsing="false" onAction="#sortFromFirstButtonOnAction" prefHeight="34.0" prefWidth="272.0" style="-fx-background-color: #A9E2F3; -fx-border-color: #58ACFA; -fx-border-width: 2px; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Отсортировать по фамилии от А до Я">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="sortFromLastButton" layoutX="14.0" layoutY="643.0" mnemonicParsing="false" onAction="#sortFromLastButtonOnAction" prefHeight="34.0" prefWidth="272.0" style="-fx-background-color: #A9E2F3; -fx-border-color: #58ACFA; -fx-border-width: 2px; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Отсортировать по фамилии от Я до А">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="sortAgeButton" layoutX="333.0" layoutY="592.0" mnemonicParsing="false" onAction="#sortAgeButtonOnAction" prefHeight="34.0" prefWidth="272.0" style="-fx-background-color: #A9E2F3; -fx-border-color: #58ACFA; -fx-border-width: 2px; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Отсортировать по возрасту">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="addButton" layoutX="652.0" layoutY="592.0" mnemonicParsing="false" onAction="#addButtonOnAction" prefHeight="34.0" prefWidth="272.0" style="-fx-background-color: #A9E2F3; -fx-border-color: #58ACFA; -fx-border-width: 2px; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Добавить запись">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="deleteButton" layoutX="652.0" layoutY="643.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="34.0" prefWidth="272.0" style="-fx-background-color: #A9E2F3; -fx-border-color: #58ACFA; -fx-border-width: 2px; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Удалить запись">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="changeButton" layoutX="333.0" layoutY="643.0" mnemonicParsing="false" onAction="#changeButtonOnAction" prefHeight="34.0" prefWidth="272.0" style="-fx-background-color: #A9E2F3; -fx-border-color: #58ACFA; -fx-border-width: 2px; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="Изменить запись">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="searchField" layoutX="210.0" layoutY="545.0" prefHeight="34.0" prefWidth="407.0" promptText="Введите фамилию пациента" style="-fx-background-color: #EFFBFB; -fx-border-color: #A9E2F3; -fx-border-width: 3px; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="searchButton" layoutX="618.0" layoutY="545.0" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="34.0" prefWidth="110.0" style="-fx-background-color: #A9E2F3; -fx-border-color: #A9E2F3; -fx-border-width: 2px; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="ПОИСК">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
